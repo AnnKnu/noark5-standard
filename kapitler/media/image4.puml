@@ -1,0 +1,68 @@
+@startuml
+scale max 4096 width
+skinparam nodesep 100
+
+class arkiv {
+  systemID
+  tittel
+  opprettetDato
+  opprettetAv
+  avsluttetDato
+  avsluttetAv
+}
+
+class arkivskaper {
+  arkivskaperID
+  arkivskaperNavn
+}
+
+class arkivdel {
+  systemID
+  tittel
+  opprettetDato
+  opprettetAv
+  avsluttetDato
+  avsluttetAv
+}
+
+class registrering {
+  systemID
+  opprettetDato
+  opprettetAv
+  arkivertDato
+  arkivertAv
+  tittel
+}
+
+class dokumentbeskrivelse {
+  systemID
+  dokumenttype
+  dokumentstatus
+  tittel
+  opprettetDato
+  opprettetAv
+  tilknyttetRegistreringSom
+  dokumentnummer
+  tilknyttetDato
+  tilknyttetAv
+}
+
+class dokumentobjekt {
+  systemID
+  versjonsnummer
+  variantformat
+  format
+  opprettetDato
+  opprettetAv
+  referanseDokumentfil
+  sjekksum
+  sjekksumAlgoritme
+  filstoerrelse
+}
+
+arkiv "1" o--> "1..*" arkivdel
+arkiv "1..*" o-> "1..*" arkivskaper
+arkivdel "1" o--> "0..*" registrering
+registrering "1..*" o--> "0..*" dokumentbeskrivelse
+dokumentbeskrivelse "1" o--> "0..*" dokumentobjekt
+@enduml

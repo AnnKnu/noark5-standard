@@ -1,0 +1,33 @@
+' FIXME missing constraints 'enten/eller'
+@startuml
+scale max 4096 width
+skinparam nodesep 100
+allowmixing
+
+class arkiv
+class arkivdel
+class klassifikasjonssystem
+class klasse
+class mappe
+class registrering
+class dokumentbeskrivelse
+class dokumentobjekt
+package "Elektronisk dokument"
+
+arkiv "1" o-- "1..*" arkivdel
+arkiv "0..*" o- "1.*" arkiv : underarkiv
+klassifikasjonssystem "0..*" -o "1..*" arkivdel
+klassifikasjonssystem "1" o-- "1..*" klasse
+klasse "0..1" o-- "0..*" mappe
+klasse "0..1" o- "0..*" klasse : underklasse
+mappe "1" o-- "0..*" registrering
+mappe "0..1" o- "0..*" mappe : undermappe
+mappe .> "0..*" arkivdel
+klasse "1" o- "0..*" registrering
+arkivdel "1" o-- "0..*" registrering
+registrering "1..*" o-- "0..*" dokumentbeskrivelse
+registrering .> "0..*" arkivdel
+dokumentbeskrivelse "1" o-- "0..*" dokumentobjekt
+dokumentbeskrivelse .> "0..*" arkivdel
+dokumentobjekt . "1" "Elektronisk dokument"
+@enduml

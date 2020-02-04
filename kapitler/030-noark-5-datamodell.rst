@@ -815,7 +815,7 @@ Løsningen må dessuten legge til rette for at administratorer har kontroll på 
 .. |image2| image:: ./media/image3.png
    :width: 3.67058in
    :height: 5.032in
-.. |image3| image:: ./media/image4.jpg
+.. |image3| image:: ./media/image4.png
    :width: 3.56983in
    :height: 8.472in
 .. |image4| image:: ./media/image5.jpg
@@ -833,18 +833,18 @@ Løsningen må dessuten legge til rette for at administratorer har kontroll på 
 .. |image8| image:: ./media/image9.jpg
    :width: 5.864in
    :height: 6.60538in
-.. |image9| image:: ./media/image10.jpg
+.. |image9| image:: ./media/image10.png
    :width: 5.944in
    :height: 3.51928in
-.. |image10| image:: ./media/image11.jpg
+.. |image10| image:: ./media/image11.png
    :width: 4.96in
    :height: 3.28398in
-.. |image11| image:: ./media/image12.jpg
+.. |image11| image:: ./media/image12.png
    :width: 4.672in
    :height: 3.43911in
-.. |image12| image:: ./media/image13.jpg
+.. |image12| image:: ./media/image13.png
    :width: 4.752in
    :height: 2.9429in
-.. |image13| image:: ./media/image14.jpg
+.. |image13| image:: ./media/image14.png
    :width: 6.37708in
    :height: 1.91111in

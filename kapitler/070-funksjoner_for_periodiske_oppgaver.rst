@@ -14,9 +14,13 @@ Kassasjon er like aktuelt i elektroniske arkiver som i fysiske arkiver. Langtids
 
 Kassasjon betyr ikke at en må gå inn og vurdere bevaringsverdien for hvert eneste dokument. For at kassasjon av elektroniske dokumenter skal være praktisk gjennomførbart, må en fastsette bevarings- og kassasjonskriterier på et overordnet plan - dvs. på et makronivå. Internasjonal arkivteori argumenterer for *funksjonsbasert makrokassasjon*. Det betyr at arkivdokumentenes bevaringsverdi avhenger av funksjonen eller aktiviteten som har skapt dokumentet - og ikke av selve innholdet i dokumentet. Også i Norge er det enighet om at funksjonsbasert kassasjon på makronivå kan være en viktig metode, selv om hensynet til dokumentenes innhold tradisjonelt er tillagt stor betydning. [13]_
 
-Konseptuell modell for *Kassasjon*
-
 |image14|
+
+.. |image14| figure:: ./media/image15.png
+   :width: 5.32794in
+   :height: 5.256in
+
+   Konseptuell modell for *Kassasjon*
 
 Kassasjon
 
@@ -1241,7 +1245,3 @@ Hensikten med rapporten *arkivoversikt* er å gi en oversikt over hvilke arkivde
 
 .. [17]
    Per 1. mars 2011 er det versjon 8.2 av ADDML som er gjeldende.
-
-.. |image14| image:: ./media/image15.jpg
-   :width: 5.32794in
-   :height: 5.256in

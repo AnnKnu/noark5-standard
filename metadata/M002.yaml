@@ -1,0 +1,26 @@
+Nr: M002
+Navn: klasseID
+Datatype: Tekststreng
+Noark 4:
+Avleveres: Ja
+Obligatorisk/valgfri: Obligatorisk
+Forekomster: 1
+Definisjon:
+ Entydig identifikasjon av klassen innenfor klassifikasjonssystemet.
+Arkivenhet: klasse
+Kilde:
+ Alle klasser i et klassifikasjonssystem opprettes vanligvis når et
+ arkivsystem tas i bruk. Men enkelte løsninger kan tillate at det
+ opprettes nye klasser ved behov (mest aktuelt ved objektbasert
+ klassifikasjon).
+Arv:
+ I hierarkiske klassifikasjonssystemer (f.eks. statens arkivnøkkel)
+ skal en underordnet klasse arve og aggregere (slå sammen)
+ identifikasjonen fra alle overordnede klasser, se kommentar nedenfor.
+Betingelser: Skal ikke kunne endres
+Kommentarer:
+ Ulike klassifikasjonssystemer innenfor samme arkivsystem kan
+ inneholde en eller flere av de samme identifikasjonene.
+ Identifikasjonen kan være rent nummerisk, men kan også være
+ alfanumerisk og ha et logisk meningsinnhold.  Merk at *klasseID* er
+ identisk med begrepene ordningsverdi og arkivkode i Noark 4.

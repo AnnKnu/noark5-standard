@@ -1,0 +1,60 @@
+#!/usr/bin/python3
+
+import argparse
+import sys
+import tabulate
+import yaml
+
+
+def main():
+    retval = 0
+    required = ('Nr', 'Navn', 'Datatype', 'Avleveres', 'Obligatorisk/valgfri',
+                'Forekomster', 'Definisjon', 'Arkivenhet', 'Kilde')
+    optional = ('Noark 4', 'Arv', 'Betingelser', 'Kommentarer',)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("yamlfile", nargs='+',
+                        help="the metadata YAML file(s) to summarize")
+    parser.add_argument("--verbose", action="store_true",
+                        help="enable debug output")
+    parser.add_argument("--sortonobject", action="store_true",
+                        help="alternative output format, sorted on objects")
+    args = parser.parse_args()
+    metadata = {}
+    puids = {}
+    for filename in args.yamlfile:
+        with open(filename, 'r') as f:
+            info = yaml.load(f)
+            for field in required:
+                if not field in info:
+                    print("error: Missing field %s in %s" % (field, filename),
+                          file=sys.stderr)
+                    retval = 1
+            for field in optional:
+                if field not in info:
+                    info[field] = ""
+            info['filename'] = filename
+            if info['Nr'] in metadata:
+                print("error: duplicate nummer %s (%s and %s)" % (
+                    info['Nr'], filename, metadata[info['Nr']]['filename']
+                ),
+                      file=sys.stderr)
+            else:
+                nummer = info['Nr']
+                metadata[nummer] = info
+    # FIXME Reformat output to look like attachment 1 and 2
+    fields = ('Nr', 'Navn', 'Forekomster', 'Navn', 'Kommentarer')
+    table = []
+    for formatcode in sorted(metadata.keys()):
+        table.append([ metadata[formatcode][field] for field in fields])
+
+    print("""
+Metadatakatalog for Noark 5
+===========================
+
+
+""")
+    print(tabulate.tabulate(table, headers=fields, tablefmt='rst'))
+    return retval
+
+if '__main__'== __name__:
+    exit(main())

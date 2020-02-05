@@ -1,0 +1,20 @@
+Nr: M001
+Navn: systemID
+Datatype: Tekststreng
+Noark 4:
+Avleveres: Ja
+Obligatorisk/valgfri: Obligatorisk
+Forekomster: 1
+Definisjon:
+  Globalt unik identifikasjon av arkivenheten (UID).
+Arkivenhet:
+  arkiv, arkivdel, klassifikasjonssystem, klasse, mappe, registrering,
+  dokumentbeskrivelse, dokumentobjekt
+Kilde: Registreres automatisk av systemet
+Arv: Nei
+Betingelser: Skal ikke kunne endres
+Kommentarer:
+  Alle referanser fra en arkivenhet til en annen skal peke til
+  arkivenhetens systemidentifikasjon. Dette gjelder også referanser
+  fra en arkivdel til en annen, f.eks. mellom to arkivperioder som
+  avleveres på forskjellig tidspunkt.
